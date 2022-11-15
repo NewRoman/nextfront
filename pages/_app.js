@@ -19,6 +19,7 @@ const MyApp = ({ Component, pageProps }) => {
   console.log('component', Component, 'pageProps', pageProps)
   return (
     <>
+    <h1>helo</h1>
       {/* Favicon */}
       {/* <Head>
         <link
@@ -64,9 +65,9 @@ MyApp.getInitialProps = async (appContext) => {
 
   return {
     ...appProps,
-    // pageProps: {
-    //   global: globalLocale,
-    // },
+    pageProps: {
+      global: globalLocale,
+    },
   }
 }
 
