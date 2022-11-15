@@ -49,7 +49,7 @@ const MyApp = ({ Component, pageProps }) => {
         }}
       /> */}
       {/* Display the content */}
-      {/* <Component {...pageProps} /> */}
+      <Component {...pageProps} />
     </>
   )
 }
