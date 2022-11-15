@@ -9,26 +9,26 @@ import "@/styles/index.css"
 
 const MyApp = ({ Component, pageProps }) => {
   // Extract the data we need
-  // const { global } = pageProps
-  // if (global == null) {
-  //   return <ErrorPage statusCode={404} />
-  // }
+  const { global } = pageProps
+  if (global == null) {
+    return <ErrorPage statusCode={404} />
+  }
 
-  // const { metadata, favicon, metaTitleSuffix } = global.attributes
+  const { metadata, favicon, metaTitleSuffix } = global.attributes
 
   console.log('component', Component, 'pageProps', pageProps)
   return (
     <>
     <h1>helo</h1>
       {/* Favicon */}
-      {/* <Head>
+      <Head>
         <link
           rel="shortcut icon"
           href={getStrapiMedia(favicon.data.attributes.url)}
         />
-      </Head> */}
+      </Head>
       {/* Global site metadata */}
-      {/* <DefaultSeo
+      <DefaultSeo
         titleTemplate={`%s | ${metaTitleSuffix}`}
         title="Page"
         description={metadata.metaDescription}
@@ -47,7 +47,7 @@ const MyApp = ({ Component, pageProps }) => {
           cardType: metadata.twitterCardType,
           handle: metadata.twitterUsername,
         }}
-      /> */}
+      />
       {/* Display the content */}
       <Component {...pageProps} />
     </>
